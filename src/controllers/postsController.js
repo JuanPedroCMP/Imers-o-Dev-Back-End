@@ -1,4 +1,4 @@
-import getTodosPosts from "../models/postsModel.js";
+import  { getTodosPosts , criarPost } from "../models/postsModel.js";
 
 export async function listarPosts(req, res) {
     // Define uma rota HTTP GET no caminho "/posts".
@@ -11,7 +11,7 @@ export async function listarPosts(req, res) {
 }
 
 export async function postarNovoPost(req, res) {
-    novoPost = req.body
+    const novoPost = req.body;
     try {
         const postCriado = await criarPost(novoPost);
         res.status(200).json(novoPost);

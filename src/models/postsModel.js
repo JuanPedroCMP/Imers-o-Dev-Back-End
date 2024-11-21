@@ -1,4 +1,4 @@
-import {conectarAoBanco , criarPost} from "../config/dbConfig.js";
+import conectarAoBanco from "../config/dbConfig.js";
 // Importa uma função para conectar ao banco de dados. O arquivo dbConfig.js deve exportar a função 'conectarAoBanco'.
 
 const conexao = await conectarAoBanco(process.env.STRING_CONEXAO);
